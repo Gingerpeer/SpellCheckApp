@@ -30,7 +30,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Set;
 import java.util.TreeSet;
 
 public class SpellCheckApp {
@@ -126,6 +125,8 @@ public class SpellCheckApp {
     public static String getInputFileNameFromUser() {
         Scanner console = new Scanner(System.in);
         System.out.print("Enter the name of the file to spell-check: ");
-        return console.nextLine();
+        String word = console.nextLine();
+        console.close();
+        return word;
     }
   }
